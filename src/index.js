@@ -6,7 +6,8 @@ import _fs from 'fs';
 import os from 'os';
 import macosRelease from 'macos-release';
 
-const git = promisifyAll(gitFact());
+export const git = promisifyAll(gitFact());
+
 const fs = promisifyAll(_fs);
 
 export const getOs = (osNameArgs = [], release = os.release()) => {

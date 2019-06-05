@@ -1,0 +1,54 @@
+{
+  "name": "@znemz/build-info",
+  "version": "0.0.1",
+  "description": "All things build information! git, os, artifacts times",
+  "repository": "git@github.com:nmccready/build-info.git",
+  "license": "MIT",
+  "author": "Nicholas McCready",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "gulp": "node -r esm ./node_modules/.bin/gulp",
+    "postinstall": "yarn sort-package-json",
+    "jest": "node -r esm ./node_modules/.bin/jest",
+    "lint": "esw *.js __jest__ --color",
+    "lint:watch": "yarn lint --watch",
+    "test": "yarn jest"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.5",
+    "eslint": "^5.16.0",
+    "eslint-config-gulp": "^3.0.1",
+    "lodash": "^4.17.11",
+    "macos-release": "^2.2.0",
+    "os-name": "^3.1.0",
+    "simple-git": "^1.113.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "del": "^4.1.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-import-resolver-jest": "^2.1.1",
+    "eslint-plugin-jest": "^22.3.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-watch": "^5.1.2",
+    "esm": "^3.2.22",
+    "gulp": "4",
+    "gulp-babel": "^8",
+    "gulp-eslint": "^4",
+    "jest": "^24",
+    "jest-cli": "^24",
+    "jest-expect-message": "^1.0.2",
+    "jest-extended": "^0.11.1",
+    "sort-package-json": "^1.21.0"
+  }
+}

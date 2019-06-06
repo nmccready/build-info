@@ -5,12 +5,13 @@ import { pick, first } from 'lodash';
 import _fs from 'fs';
 import os from 'os';
 import macosRelease from 'macos-release';
+import path from 'path';
 
 export const git = promisifyAll(gitFact());
 
 const fs = promisifyAll(_fs);
 
-export const getOs = (osNameArgs = [], release = os.release()) => {
+export const getOS = (osNameArgs = [], release = os.release()) => {
   const name = osName(...osNameArgs);
   const shortName = first(name.split(' '));
   if (['macOS', 'OS X'].indexOf(shortName) >= 0) {
@@ -62,7 +63,12 @@ const buildInfoAsync = ({ pack = [], build = [], os = [] }) =>
     pack: getPackage(...pack),
     git: getGitAsync(),
     build: getBuildTimeAsync(...build),
-    os: getOs(...os),
+    os: getOS(...os),
   });
 
 export default buildInfoAsync;
+
+buildInfoAsync({
+  build: [path.join(__dirname, 'index.js')],
+  pack: [path.join(__dirname, '..', 'package.json')],
+}).then(console.log);

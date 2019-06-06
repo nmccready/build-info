@@ -12,6 +12,7 @@
   ],
   "main": "lib/index.js",
   "scripts": {
+    "build": "yarn gulp",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "example": "node -r esm examples/basic.js",
     "gulp": "node -r esm ./node_modules/.bin/gulp",
@@ -19,8 +20,10 @@
     "lint": "esw *.js __jest__ --color",
     "lint:watch": "yarn lint --watch",
     "prepare": "yarn sort-package-json",
+    "prepublish": "yarn test && yarn build",
     "test": "yarn jest",
-    "test:ci": "yarn test --coverage"
+    "test:ci": "yarn test --coverage",
+    "preversion": "yarn test && yarn build"
   },
   "dependencies": {
     "bluebird": "^3.5.5",

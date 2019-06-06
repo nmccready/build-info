@@ -115,7 +115,7 @@ getOS();
 
 [npm-image]: https://img.shields.io/npm/v/@znemz/build-info.svg
 [npm-url]: https://www.npmjs.com/package/@znemz/build-info
-[travis-image]: https://img.shields.io/travis/@znemz/build-info/@znemz/build-info.svg
-[travis-url]: https://travis-ci.org/@znemz/build-info/@znemz/build-info
+[travis-image]: https://img.shields.io/travis/nmccready/build-info.svg
+[travis-url]: https://travis-ci.org/nmccready/build-info
 [coveralls-image]: https://coveralls.io/repos/github/nmccready/build-info/badge.svg
 [coveralls-url]: https://coveralls.io/github/nmccready/build-info?branch=master

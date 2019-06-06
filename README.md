@@ -1,4 +1,4 @@
-# build-info
+# build-info  [![NPM version][npm-image]][npm-url] [![build status][travis-image]][travis-url] [![Test coverage][coveralls-image]][coveralls-url]
 
 Simple utility which combines, git, package and build creation info into one.
 
@@ -112,3 +112,10 @@ Type: `string` - specify a specific release, for `mac-release`.
 getOS()
 // macOS Mojave 10.14, Darwin: 18.6.0
 ```
+
+[npm-image]: https://img.shields.io/npm/v/@znemz/build-info.svg
+[npm-url]: https://www.npmjs.com/package/@znemz/build-info
+[travis-image]: https://img.shields.io/travis/@znemz/build-info/@znemz/build-info.svg
+[travis-url]: https://travis-ci.org/@znemz/build-info/@znemz/build-info
+[coveralls-image]: https://img.shields.io/coveralls/@znemz/build-info/@znemz/build-info.svg
+[coveralls-url]: https://coveralls.io/r/@znemz/build-info/@znemz/build-info?branch=master

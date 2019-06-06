@@ -12,13 +12,15 @@
   ],
   "main": "lib/index.js",
   "scripts": {
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "example": "node -r esm examples/basic.js",
     "gulp": "node -r esm ./node_modules/.bin/gulp",
     "postinstall": "yarn sort-package-json",
     "jest": "node -r esm ./node_modules/.bin/jest",
     "lint": "esw *.js __jest__ --color",
     "lint:watch": "yarn lint --watch",
     "test": "yarn jest",
-    "example": "node -r esm examples/basic.js"
+    "test:ci": "yarn test --coverage"
   },
   "dependencies": {
     "bluebird": "^3.5.5",
@@ -38,6 +40,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "coveralls": "^3.0.4",
     "del": "^4.1.1",
     "eslint-config-prettier": "^4.0.0",
     "eslint-import-resolver-jest": "^2.1.1",

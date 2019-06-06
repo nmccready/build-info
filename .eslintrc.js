@@ -12,7 +12,8 @@ module.exports = {
   },
   rules: {
     'space-before-function-paren': 0,
-    'max-len': ['error', { code: prettier.printWidth, ignoreUrls: true }], // KEEP THIS IN SYNC
+    'max-len': ['error', { code: prettier.printWidth, ignoreUrls: true }], // KEEP THIS IN SYNC,
+    'no-unused-vars': ["error", { "argsIgnorePattern": "^_" }],
   },
   overrides: [
     {

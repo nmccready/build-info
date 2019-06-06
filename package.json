@@ -17,7 +17,8 @@
     "jest": "node -r esm ./node_modules/.bin/jest",
     "lint": "esw *.js __jest__ --color",
     "lint:watch": "yarn lint --watch",
-    "test": "yarn jest"
+    "test": "yarn jest",
+    "example": "node -r esm examples/basic.js"
   },
   "dependencies": {
     "bluebird": "^3.5.5",

@@ -5,7 +5,6 @@ import { pick, first } from 'lodash';
 import _fs from 'fs';
 import os from 'os';
 import macosRelease from 'macos-release';
-import path from 'path';
 
 export const git = promisifyAll(gitFact());
 
@@ -67,8 +66,3 @@ const buildInfoAsync = ({ pack = [], build = [], os = [] }) =>
   });
 
 export default buildInfoAsync;
-
-buildInfoAsync({
-  build: [path.join(__dirname, 'index.js')],
-  pack: [path.join(__dirname, '..', 'package.json')],
-}).then(console.log);

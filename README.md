@@ -1,4 +1,4 @@
-# build-info  [![NPM version][npm-image]][npm-url] [![build status][travis-image]][travis-url] [![Test coverage][coveralls-image]][coveralls-url]
+# build-info [![NPM version][npm-image]][npm-url] [![build status][travis-image]][travis-url] [![Test coverage][coveralls-image]][coveralls-url]
 
 Simple utility which combines, git, package and build creation info into one.
 
@@ -82,7 +82,7 @@ Returns the git current commit, branch, and tag info.
 `Promise<Object>` - `{ commit, branch, tag }`
 
 ```js
-getGitAsync().then(console.log)
+getGitAsync().then(console.log);
 // { branch: 'master',
 //   commit: '7f84cea66d5faf8c14000bd34a130ce730f68bde',
 //   tag: TagList { latest: undefined, all: [] } }
@@ -109,7 +109,7 @@ Type: `string` - specify a specific release, for `mac-release`.
 `String` - OS info name + release
 
 ```js
-getOS()
+getOS();
 // macOS Mojave 10.14, Darwin: 18.6.0
 ```
 
@@ -117,5 +117,5 @@ getOS()
 [npm-url]: https://www.npmjs.com/package/@znemz/build-info
 [travis-image]: https://img.shields.io/travis/@znemz/build-info/@znemz/build-info.svg
 [travis-url]: https://travis-ci.org/@znemz/build-info/@znemz/build-info
-[coveralls-image]: https://img.shields.io/coveralls/@znemz/build-info/@znemz/build-info.svg
-[coveralls-url]: https://coveralls.io/r/@znemz/build-info/@znemz/build-info?branch=master
+[coveralls-image]: https://coveralls.io/repos/github/nmccready/build-info/badge.svg
+[coveralls-url]: https://coveralls.io/github/nmccready/build-info?branch=master

@@ -31,7 +31,7 @@ export const getGitAsync = () =>
     ),
   }).then((all) => {
     const { commit } = all;
-    return props({ ...all, tag: git.tagsAsync({ contains: commit }) });
+    return props({ ...all, tag: git.tagsAsync({ '--contains': commit }) });
   });
 
 /**

@@ -44,18 +44,25 @@ export const getGitAsync = () =>
 export const getPackage = (filePath, picks = ['name', 'version']) =>
   pick(require(filePath), picks);
 
-export const getArtifactBuildTimeAsync = (filePath) => {
+/**
+ * @param  {String} filePath
+ */
+export const getBuildTimeAsync = (filePath) => {
   return fs.statAsync(filePath).then(({ birthtime }) => birthtime);
 };
 
-export const getBuildTimeAsync = getArtifactBuildTimeAsync;
-
-const buildInfoAsync = (buildFile, packageFile) =>
+/**
+ * @param  {Object} options
+ * @param  {Array} options.pack - getBuildTimeAsync args
+ * @param  {Array} options.build - getBuildTimeAsync args
+ * @param  {Array} options.os - getOs args
+ */
+const buildInfoAsync = ({ pack = [], build = [], os = [] }) =>
   props({
-    pack: getPackage(packageFile),
+    pack: getPackage(...pack),
     git: getGitAsync(),
-    build: getBuildTimeAsync(buildFile),
-    os: getOs(),
+    build: getBuildTimeAsync(...build),
+    os: getOs(...os),
   });
 
 export default buildInfoAsync;

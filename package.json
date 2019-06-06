@@ -6,7 +6,9 @@
   "license": "MIT",
   "author": "Nicholas McCready",
   "files": [
-    "lib"
+    "lib",
+    "src/*.js",
+    "!src/*.spec.js"
   ],
   "main": "lib/index.js",
   "scripts": {

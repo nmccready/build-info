@@ -29,7 +29,7 @@
     "bluebird": "^3.5.5",
     "eslint": "^5.16.0",
     "eslint-config-gulp": "^3.0.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "macos-release": "^2.2.0",
     "os-name": "^3.1.0",
     "simple-git": "^1.113.0"

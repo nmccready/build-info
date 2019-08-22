@@ -1,6 +1,6 @@
 {
   "name": "@znemz/build-info",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "All things build information! git, os, artifacts times",
   "repository": "git@github.com:nmccready/build-info.git",
   "license": "MIT",

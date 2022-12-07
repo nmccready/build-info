@@ -32,7 +32,7 @@
     "lodash": "^4.17.15",
     "macos-release": "^2.2.0",
     "os-name": "^3.1.0",
-    "simple-git": "^1.113.0"
+    "simple-git": "^3.15.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
